@@ -1,0 +1,384 @@
+html {
+  font-family: "Encode Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-area {
+  width: 171px;
+  height: 36px;
+  margin: 22px 0px;
+  background-image: url(../media/globo.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.menu-area {
+  width: 100vw;
+  border-top: 1px solid #f5f6f7;
+  border-bottom: 1px solid #f5f6f7;
+}
+
+.menu-area nav {
+  max-width: 1250px;
+  margin: auto;
+}
+
+.menu-area nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-area nav ul li {
+  padding: 10px 0px;
+}
+
+.menu-area nav ul li:hover {
+  filter: opacity(0.5);
+}
+
+.menu-area nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 19px;
+  padding: 5px;
+}
+
+.menu-area nav ul li:nth-child(1) a {
+  color: #c3170c;
+}
+.menu-area nav ul li:nth-child(2) a {
+  color: #1e4b9b;
+}
+.menu-area nav ul li:nth-child(3) a {
+  color: #006766;
+}
+.menu-area nav ul li:nth-child(4) a {
+  color: #07aa47;
+}
+.menu-area nav ul li:nth-child(5) a {
+  color: #e3662b;
+}
+.menu-area nav ul li:nth-child(6) a {
+  color: #fb0735;
+}
+.menu-area nav ul li:nth-child(7) a {
+  color: #ff75bb;
+}
+.menu-area nav ul li:nth-child(8) a {
+  color: #ec7d00;
+}
+.menu-area nav ul li:nth-child(9) a {
+  color: #323333;
+}
+.menu-area nav ul li:nth-child(10) a {
+  color: #a81d83;
+}
+
+main {
+  width: 95vw;
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+article,
+aside {
+  flex: 1;
+}
+
+article {
+  border-right: 1px solid #ebedef;
+}
+
+aside {
+  display: flex;
+}
+
+.aside--left {
+  flex: 1;
+  border-right: 1px solid #ebedef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside--right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: bold;
+  color: #c4160c;
+  margin-bottom: 29px;
+}
+h2 {
+  font-size: 18px;
+  color: #303134;
+  margin-bottom: 7px;
+}
+
+/*.main-news-area {
+  width: 100%;
+  margin-top: 44px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}*/
+
+.main-news-area {
+  width: 95%;
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 62px 24px;
+}
+
+.main-news-area .news-card {
+  min-width: 150px;
+}
+
+.aside--left .news-card,
+.aside--right .news-card {
+  width: 175px;
+  margin-bottom: 62px;
+  margin-right: 24px;
+}
+
+.news-card:hover {
+  filter: opacity(0.5);
+}
+
+.news-card a {
+  text-decoration: none;
+  color: #000;
+}
+
+.news-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 11px;
+}
+
+.news-card h5 {
+  color: #c4170c;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 4.5px;
+}
+
+h4 {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.aside--left .news-card h5 {
+  color: #16ae54;
+}
+
+.aside--right .news-card h5 {
+  color: #ec8006;
+}
+
+.aside--right .news-card:nth-child(2) h4 {
+  margin-bottom: 9px;
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.dev--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.dev--info .links {
+  margin: 15px 0px 5px;
+}
+
+.dev--info .links a:nth-child(1) img {
+  margin-right: 8px;
+}
+
+.dev--info .links img {
+  width: 18px;
+}
+
+.dev--info .links img:hover {
+  filter: opacity(0.5);
+}
+
+@media (max-width: 1080px) {
+  .main-news-area {
+    width: 95%;
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 62px 24px;
+  }
+
+  .main-news-area .news-card {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 700px) {
+  .logo-area {
+    background-image: url("../media/Globo.com_logo_mobile.svg.png");
+    background-repeat: no-repeat;
+  }
+
+  .menu-area {
+    width: 90vw;
+  }
+
+  .menu-area nav ul li:nth-child(6),
+  .menu-area nav ul li:nth-child(7),
+  .menu-area nav ul li:nth-child(8),
+  .menu-area nav ul li:nth-child(9),
+  .menu-area nav ul li:nth-child(10) {
+    display: none;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+    border-right: none;
+  }
+
+  h1 {
+    font-size: 32px;
+    color: #cd150b;
+  }
+
+  h2,
+  h3 {
+    font-size: 18px;
+    color: #cd150b;
+  }
+
+  h4 {
+    font-size: 16px;
+    color: #cd150b;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .main-news-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .news-card {
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    padding: 15px 0px;
+    margin-bottom: 0px;
+  }
+
+  .news-card a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-card a div img {
+    width: 30%;
+    margin-right: 13.5px;
+  }
+
+  .news-card:nth-child(4) a div,
+  .news-card:nth-child(5) a div,
+  .news-card:nth-child(6) a div,
+  .aside--left .news-card:nth-child(3) a div img,
+  .aside--right .news-card:nth-child(2) a div img {
+    margin-bottom: 10px;
+  }
+
+  .news-card:nth-child(4) a div img,
+  .news-card:nth-child(5) a div img,
+  .news-card:nth-child(6) a div img,
+  .aside--left .news-card:nth-child(3) a div img,
+  .aside--right .news-card:nth-child(2) a div img {
+    display: none;
+  }
+
+  .media-container {
+    display: flex;
+  }
+
+  .news-card a h5 {
+    display: none;
+  }
+
+  aside {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .aside--left {
+    border-right: none;
+    margin: 50px 0px;
+  }
+
+  .aside--left,
+  .aside--right {
+    width: 100%;
+  }
+
+  .aside--left .news-card,
+  .aside--right .news-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .aside--left h3,
+  .aside--left h4 {
+    color: #06aa48;
+  }
+
+  .aside--right h3,
+  .aside--right h4 {
+    color: #ff8203;
+  }
+
+  .aside--right h3 {
+    margin-bottom: 10px;
+  }
+}
